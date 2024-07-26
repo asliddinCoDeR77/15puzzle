@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:puzzels15/services/puzzle_services.dart';
+import 'package:puzzels15/setup/setup.dart';
 import 'package:puzzels15/views/screens/introduce/splash_screen.dart';
 
 void main() {
-  setupLocator();
+  dependencysetup();
   runApp(const MainApp());
 }
 

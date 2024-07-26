@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:get/get.dart';
 import 'package:puzzels15/services/puzzle_services.dart';
+import 'package:puzzels15/setup/setup.dart';
 import 'package:puzzels15/views/screens/game/setting_screen.dart';
 import 'package:puzzels15/views/screens/introduce/start_screen.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
@@ -14,8 +15,8 @@ class GameScreen extends StatefulWidget {
 }
 
 class _GameScreenState extends State<GameScreen> {
-  final PuzzleService _puzzleService = locator<PuzzleService>();
-  final AudioPlayer _audioPlayer = locator<AudioPlayer>();
+  final PuzzleService _puzzleService = dependency<PuzzleService>();
+  final AudioPlayer _audioPlayer = dependency<AudioPlayer>();
 
   @override
   void initState() {
