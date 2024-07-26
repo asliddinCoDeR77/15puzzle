@@ -5,6 +5,6 @@ import 'package:puzzels15/services/puzzle_services.dart';
 final GetIt dependency = GetIt.instance;
 
 void dependencysetup() {
-  dependency.registerSingleton(() => AudioPlayer());
-  dependency.registerSingleton(() => PuzzleService());
+  dependency.registerLazySingleton(() => AudioPlayer());
+  dependency.registerLazySingleton(() => PuzzleService());
 }

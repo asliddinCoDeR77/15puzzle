@@ -137,7 +137,7 @@ class _GameScreenState extends State<GameScreen> {
                         child: Container(
                           decoration: BoxDecoration(
                             color:
-                                piece == 0 ? Colors.transparent : Colors.blue,
+                                piece == 0 ? Colors.transparent : Colors.orange,
                             borderRadius: BorderRadius.circular(5),
                             border: Border.all(color: Colors.black),
                           ),
