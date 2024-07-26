@@ -4,8 +4,8 @@ import 'package:audioplayers/audioplayers.dart';
 final GetIt locator = GetIt.instance;
 
 void setupLocator() {
-  locator.registerLazySingleton(() => AudioPlayer());
-  locator.registerLazySingleton(() => PuzzleService());
+  locator.registerSingleton(() => AudioPlayer());
+  locator.registerSingleton(() => PuzzleService());
 }
 
 class PuzzleService {
@@ -13,7 +13,6 @@ class PuzzleService {
 
   void shufflePuzzle() {
     puzzlePieces.shuffle();
-    // Ensure the puzzle is solvable
     while (!_isSolvable() || isSolved()) {
       puzzlePieces.shuffle();
     }
