@@ -27,7 +27,7 @@ class _MainScreenState extends State<MainScreen> {
               child: Image.asset('assets/images/setting.png'),
             ),
             onTap: () {
-              Get.to(SettingsPage(), transition: Transition.fadeIn);
+              Get.to(const SettingsPage(), transition: Transition.fadeIn);
             },
           ),
         ],
@@ -43,7 +43,7 @@ class _MainScreenState extends State<MainScreen> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(
+                const Text(
                   'Welcome to the Puzzle Game!',
                   style: TextStyle(
                     fontSize: 24,
@@ -51,12 +51,12 @@ class _MainScreenState extends State<MainScreen> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 50),
+                const SizedBox(height: 50),
                 ZoomTapAnimation(
                   child: Stack(
                     children: [
                       Transform.translate(
-                        offset: Offset(0, 4),
+                        offset: const Offset(0, 4),
                         child: Container(
                           width: 200,
                           height: 60,
@@ -73,7 +73,7 @@ class _MainScreenState extends State<MainScreen> {
                           color: Colors.blue,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             'Start',
                             style: TextStyle(
@@ -87,7 +87,8 @@ class _MainScreenState extends State<MainScreen> {
                     ],
                   ),
                   onTap: () {
-                    Get.to(GameScreen(), transition: Transition.circularReveal);
+                    Get.to(const GameScreen(),
+                        transition: Transition.circularReveal);
                   },
                 ),
               ],
